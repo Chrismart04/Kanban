@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Column} from '../../models/task.model';
+import {TaskService} from '../task.service';
 
 @Component({
   selector: 'app-kanban-board',
@@ -8,5 +10,8 @@ import { Component } from '@angular/core';
   styleUrl: './kanban-board.component.css'
 })
 export class KanbanBoardComponent {
-
+  columns: Column[];
+  constructor(private taskService: TaskService) {
+    this.columns = this.taskService.getColumns();
+  }
 }

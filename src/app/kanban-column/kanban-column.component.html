@@ -1,1 +1,7 @@
-<p>kanban-column works!</p>
+<h3>{{ column.title }}</h3>
+<div class="tasks">
+  <app-kanban-task
+    *ngFor="let task of column.tasks"
+    [task]="task">
+  </app-kanban-task>
+</div>

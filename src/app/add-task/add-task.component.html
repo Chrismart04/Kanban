@@ -1,1 +1,16 @@
-<p>add-task works!</p>
+<form (ngSubmit)="addTask()">
+  <label for="title">Título:</label>
+  <input type="text" id="title" [(ngModel)]="title" name="title" required>
+
+  <label for="description">Descripción:</label>
+  <textarea id="description" [(ngModel)]="description" name="description" required></textarea>
+
+  <label for="column">Seleccionar Columna:</label>
+  <select [(ngModel)]="selectedColumnId" name="column" required>
+    <option value="1">Por Hacer</option>
+    <option value="2">En Progreso</option>
+    <option value="3">Completado</option>
+  </select>
+
+  <button type="submit">Agregar Tarea</button>
+</form>

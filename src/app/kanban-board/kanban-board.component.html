@@ -1,1 +1,7 @@
-<p>kanban-board works!</p>
+<app-add-task></app-add-task>
+<div class="kanban-columns">
+  <app-kanban-column
+    *ngFor="let column of columns"
+    [column]="column">
+  </app-kanban-column>
+</div>
