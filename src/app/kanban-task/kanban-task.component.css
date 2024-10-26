@@ -1,0 +1,22 @@
+.task {
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  padding: 0.75rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.task h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1f2937;
+}
+
+.task p {
+  margin: 0.5rem 0 0;
+  color: #4b5563;
+}
+
+.task:hover {
+  transform: translateY(-2px);
+}

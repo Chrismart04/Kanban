@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Task } from '../../models/task.model';
 
 @Component({
   selector: 'app-kanban-task',
   standalone: true,
-  imports: [],
   templateUrl: './kanban-task.component.html',
-  styleUrl: './kanban-task.component.css'
+  styleUrls: ['./kanban-task.component.css'],
 })
 export class KanbanTaskComponent {
-
+  @Input() task!: Task;
 }

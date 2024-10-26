@@ -1,22 +1,24 @@
 import { Component } from '@angular/core';
-import {TaskService} from '../task.service';
-import {Task} from '../../models/task.model';
-import {FormsModule} from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { TaskService } from '../task.service';
+import { Task } from '../../models/task.model';
+import { FormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-add-task',
   standalone: true,
-  imports: [
-    FormsModule
-  ],
+  imports: [FormsModule, CommonModule],
   templateUrl: './add-task.component.html',
-  styleUrl: './add-task.component.css'
+  styleUrls: ['./add-task.component.css']
 })
 export class AddTaskComponent {
   title: string = '';
   description: string = '';
-  selectedColumnId : number = 1;
+  selectedColumnId: number = 1;
 
-  constructor(private taskService: TaskService) {}
+  constructor(public taskService: TaskService) {
+    console.log(this.taskService.getColumns());
+  }
 
   addTask() {
     const newTask: Task = {
@@ -25,9 +27,14 @@ export class AddTaskComponent {
       description: this.description,
       status: 'todo'
     };
+
+    console.log(`Adding task to column ID: ${this.selectedColumnId}`);
     this.taskService.addTask(this.selectedColumnId, newTask);
+
+
     this.title = '';
     this.description = '';
     this.selectedColumnId = 1;
+
   }
 }

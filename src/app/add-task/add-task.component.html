@@ -1,4 +1,4 @@
-<form (ngSubmit)="addTask()">
+<form (ngSubmit)="addTask()" class="add-task-form">
   <label for="title">Título:</label>
   <input type="text" id="title" [(ngModel)]="title" name="title" required>
 
@@ -6,10 +6,8 @@
   <textarea id="description" [(ngModel)]="description" name="description" required></textarea>
 
   <label for="column">Seleccionar Columna:</label>
-  <select [(ngModel)]="selectedColumnId" name="column" required>
-    <option value="1">Por Hacer</option>
-    <option value="2">En Progreso</option>
-    <option value="3">Completado</option>
+  <select [(ngModel)]="selectedColumnId" id="column" name="column" required>
+    <option *ngFor="let column of taskService.getColumns()" [value]="column.id">{{ column.title }}</option>
   </select>
 
   <button type="submit">Agregar Tarea</button>

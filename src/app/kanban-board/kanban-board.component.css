@@ -1,0 +1,155 @@
+.kanban-board {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Aumentado el espaciado */
+  padding: 2rem; /* Más padding para mejor espaciado */
+  background-color: #f8fafc;
+  border-radius: 12px; /* Bordes más suaves */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  min-height: 90vh; /* Asegura que ocupe casi toda la altura de la pantalla */
+}
+
+.kanban-columns {
+  display: flex;
+  gap: 2rem; /* Más espacio entre columnas */
+  flex: 1;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.kanban-column {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  max-width: 350px;
+  min-height: 400px; /* Altura mínima para las columnas */
+}
+
+.kanban-column:hover {
+  background-color: #e2f0fe;
+  transform: translateY(-2px);
+}
+
+.kanban-column h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem; /* Más espacio entre tareas */
+}
+
+.task {
+  background-color: #ffffff; /* Cambiado a blanco para mejor contraste */
+  border-left: 4px solid #3b82f6;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: left; /* Alineación a la izquierda para mejor legibilidad */
+}
+
+.task h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.task p {
+  margin: 0.75rem 0 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.task:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Mejoras en el formulario de añadir tarea */
+.add-task {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+  max-width: 400px;
+  width: 100%;
+  align-self: center;
+}
+
+.add-task label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.add-task input,
+.add-task textarea,
+.add-task select {
+  width: 100%;
+  margin: 0.5rem 0 1rem;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.add-task input:focus,
+.add-task textarea:focus,
+.add-task select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.add-task button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.add-task button:hover {
+  background-color: #2563eb;
+}
+
+/* Añadido para mejorar la responsividad */
+@media (max-width: 1200px) {
+  .kanban-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kanban-column {
+    width: 100%;
+    max-width: 500px;
+  }
+}

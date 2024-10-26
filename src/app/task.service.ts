@@ -16,7 +16,7 @@ export class TaskService {
   }
 
   addTask(columnId: number, task: Task) {
-    const column = this.columns.find(c => c.id === columnId);
+    const column = this.columns.find(c => c.id == columnId);
     if (column) {
       column.tasks.push(task);
     }
