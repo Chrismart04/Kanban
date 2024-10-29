@@ -6,9 +6,9 @@ import { Task, Column } from '../models/task.model';
 })
 export class TaskService {
   private columns: Column[] = [
-    { id: 1, title: 'Por Hacer', tasks: [] },
-    { id: 2, title: 'En Progreso', tasks: [] },
-    { id: 3, title: 'Completado', tasks: [] },
+    { id: 1, title: 'Por Hacer ⏰', tasks: [] },
+    { id: 2, title: 'En Progreso 🎯', tasks: [] },
+    { id: 3, title: 'Completado ✅', tasks: [] },
   ];
 
   getColumns(): Column[] {
