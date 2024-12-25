@@ -11,9 +11,9 @@ import { FormsModule } from '@angular/forms';
     styleUrls: ['./add-task.component.css']
 })
 export class AddTaskComponent {
-  title: string = '';
-  description: string = '';
-  selectedColumnId: number = 1;
+  title = '';
+  description = '';
+  selectedColumnId = 1;
 
   constructor(public taskService: TaskService) {
     console.log(this.taskService.getColumns());
