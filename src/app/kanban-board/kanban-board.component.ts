@@ -7,11 +7,10 @@ import {KanbanColumnComponent} from '../kanban-column/kanban-column.component';
 import {KanbanTaskComponent} from '../kanban-task/kanban-task.component';
 
 @Component({
-  selector: 'app-kanban-board',
-  standalone: true,
-  imports: [CommonModule, AddTaskComponent,KanbanColumnComponent, KanbanTaskComponent],
-  templateUrl: './kanban-board.component.html',
-  styleUrl: './kanban-board.component.css'
+    selector: 'app-kanban-board',
+    imports: [CommonModule, AddTaskComponent, KanbanColumnComponent, KanbanTaskComponent],
+    templateUrl: './kanban-board.component.html',
+    styleUrl: './kanban-board.component.css'
 })
 export class KanbanBoardComponent {
   columns: Column[];

@@ -5,11 +5,10 @@ import { Task } from '../../models/task.model';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-add-task',
-  standalone: true,
-  imports: [FormsModule, CommonModule],
-  templateUrl: './add-task.component.html',
-  styleUrls: ['./add-task.component.css']
+    selector: 'app-add-task',
+    imports: [FormsModule, CommonModule],
+    templateUrl: './add-task.component.html',
+    styleUrls: ['./add-task.component.css']
 })
 export class AddTaskComponent {
   title: string = '';
