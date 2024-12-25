@@ -293,7 +293,7 @@
   .kanban-column {
     width: calc(50% - 2rem);
     flex: 1 1 calc(50% - 2rem);
-    min-width: 220px; /* Adjusted min-width to make cards smaller */
+    min-width: 220px; 
   }
 }
 
